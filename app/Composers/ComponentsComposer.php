@@ -13,6 +13,7 @@ namespace CachetHQ\Cachet\Composers;
 
 use CachetHQ\Cachet\Models\Component;
 use CachetHQ\Cachet\Models\ComponentGroup;
+use CachetHQ\Cachet\Models\StatusChange;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\View\View;
 
@@ -54,9 +55,12 @@ class ComponentsComposer
     {
         $componentGroups = $this->getVisibleGroupedComponents();
         $ungroupedComponents = Component::ungrouped()->orderBy('status', 'desc')->get();
+        $statusChanges = StatusChange::query();
 
         $view->withComponentGroups($componentGroups)
-            ->withUngroupedComponents($ungroupedComponents);
+            ->withUngroupedComponents($ungroupedComponents)
+            ->withStatusChanges($statusChanges);
+
     }
 
     /**

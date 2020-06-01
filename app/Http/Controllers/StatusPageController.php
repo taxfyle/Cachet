@@ -17,6 +17,7 @@ use CachetHQ\Cachet\Models\Component;
 use CachetHQ\Cachet\Models\Incident;
 use CachetHQ\Cachet\Models\Metric;
 use CachetHQ\Cachet\Models\Schedule;
+use CachetHQ\Cachet\Models\StatusChange;
 use CachetHQ\Cachet\Repositories\Metric\MetricRepository;
 use CachetHQ\Cachet\Services\Dates\DateFactory;
 use GrahamCampbell\Binput\Facades\Binput;

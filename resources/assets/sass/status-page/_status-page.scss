@@ -47,6 +47,10 @@ body.status-page {
         cursor: help;
     }
 
+    .text-unknown, .text-component-0 {
+        color: $cachet_grey;
+    }
+
     .text-success, .text-component-1 {
         color: $cachet_green;
     }
@@ -61,6 +65,57 @@ body.status-page {
 
     .text-danger, .text-component-4 {
         color: $cachet_red;
+    }
+
+    .rect-unknown, .rect-component-0 {
+        fill: $cachet_grey;
+        &:hover {
+            fill: $cachet-dark-grey;
+        }
+    }
+
+    .rect-success, .rect-component-1 {
+        fill: $cachet_green;
+        &:hover {
+            fill: $cachet-dark-green;
+        }
+    }
+
+    .rect-info, .rect-component-2 {
+        fill: $cachet_blue;
+        &:hover {
+            fill: $cachet-dark-blue;
+        }
+    }
+
+    .rect-alert, .rect-component-3 {
+        fill: $cachet_yellow;
+        &:hover {
+            fill: $cachet-dark-yellow;
+        }
+    }
+
+    .rect-danger, .rect-component-4 {
+        fill: $cachet_red;
+        &:hover {
+            fill: $cachet-dark-red;
+        }
+    }
+
+    .status-history-wrapper {
+        margin-top: 5px;
+    }
+
+    .status-history-component {
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .status-history-bar {
+        padding: 10%;
     }
 
     .container {

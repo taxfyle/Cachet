@@ -50,7 +50,7 @@ class UpdateComponentCommandHandler
         $component = $command->component;
         $originalStatus = $component->status;
 
-        if ($command->status && (int) $originalStatus !== (int) $command->status) {
+        if (!is_null($command->status) && (int) $originalStatus !== (int) $command->status) {
             event(new ComponentStatusWasChangedEvent($this->auth->user(), $component, $originalStatus, $command->status, $command->silent));
         }
 

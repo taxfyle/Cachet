@@ -41,6 +41,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         'CachetHQ\Cachet\Bus\Events\Component\ComponentStatusWasChangedEvent' => [
             'CachetHQ\Cachet\Bus\Handlers\Events\Component\SendComponentUpdateEmailNotificationHandler',
+            'CachetHQ\Cachet\Bus\Handlers\Events\Component\StatusChangeStorageHandler',
         ],
         'CachetHQ\Cachet\Bus\Events\Component\ComponentWasCreatedEvent' => [
             //

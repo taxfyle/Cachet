@@ -131,6 +131,13 @@ $factory->define(Subscription::class, function ($faker) {
     ];
 });
 
+$factory->define(Subscription::class, function ($faker) {
+    return [
+        'component_id'     => factory(Component::class)->create()->id,
+        'component_status' => mt_rand(1, 4),
+    ];
+});
+
 $factory->define(User::class, function ($faker) {
     return [
         'username'       => $faker->userName,
